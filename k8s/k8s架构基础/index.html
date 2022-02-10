@@ -12,14 +12,14 @@
         <meta name="author" content="renxiaoweimail@163.com">
       
       
-        <link rel="canonical" href="https://bytewei.github.io/k8s/cce/">
+        <link rel="canonical" href="https://bytewei.github.io/k8s/k8s%E6%9E%B6%E6%9E%84%E5%9F%BA%E7%A1%80/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.8">
     
     
       
-        <title>3.1. CCE - 学习笔记与工作总结</title>
+        <title>2.1. 架构简介 - 学习笔记与工作总结</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1" class="md-skip">
+        <a href="#k8s" class="md-skip">
           跳转至
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3.1. CCE
+              2.1. 架构简介
             
           </span>
         </div>
@@ -434,12 +434,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
       
       
       
@@ -460,11 +462,55 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../k8s%E6%9E%B6%E6%9E%84%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2.1. 架构简介
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         2.1. 架构简介
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#k8s" class="md-nav__link">
+    k8s起源
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#borg" class="md-nav__link">
+    Borg架构
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -481,14 +527,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
       
       
       
@@ -509,55 +553,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          3.1. CCE
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../cce/" class="md-nav__link">
         3.1. CCE
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1. 华为云机房不支持某些硬盘格式问题。
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-cce" class="md-nav__link">
-    2. 块存储挂盘问题（这其实不是问题，也不是CCE的问题，在此记录）。
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -981,15 +981,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1. 华为云机房不支持某些硬盘格式问题。
+  <a href="#k8s" class="md-nav__link">
+    k8s起源
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-cce" class="md-nav__link">
-    2. 块存储挂盘问题（这其实不是问题，也不是CCE的问题，在此记录）。
+  <a href="#borg" class="md-nav__link">
+    Borg架构
   </a>
   
 </li>
@@ -1006,32 +1006,39 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/bytewei/bytewei.github.io/edit/master/docs/k8s/cce.md" title="编辑此页" class="md-content__button md-icon">
+<a href="https://github.com/bytewei/bytewei.github.io/edit/master/docs/k8s/k8s架构基础.md" title="编辑此页" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-  <h1>3.1. CCE</h1>
+  <h1>2.1. 架构简介</h1>
 
-<h3 id="1">1. 华为云机房不支持某些硬盘格式问题。<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>如：上海二区不支持SATA了，需要在yaml文件中指定使用其他格式</p>
-</blockquote>
-<div class="highlight"><pre><span></span><code>annotations:
-        everest.io/disk-volume-type: SSD
+<h2 id="k8s"><strong>k8s起源</strong><a class="headerlink" href="#k8s" title="Permanent link">&para;</a></h2>
+<p>k8s源自谷歌Borg系统，要想理解k8s不得不了解Borg。</p>
+<div class="highlight"><pre><span></span><code>Borg的paper文档：
+http://static.googleusercontent.com/media/research.google.com/zh-CN//pubs/archive/43438.pdf
+中文翻译：
+https://zhuanlan.zhihu.com/p/55970564
 </code></pre></div>
-<p>同时指定storageclass：</p>
-<div class="highlight"><pre><span></span><code>storageClassName: csi-disk
-</code></pre></div>
-<h3 id="2-cce">2. 块存储挂盘问题（这其实不是问题，也不是CCE的问题，在此记录）。<a class="headerlink" href="#2-cce" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>给mysql5.7挂载云硬盘（块存储）时，该存储会被格式化并在存储目录中添加“lost+found”目录，mysql5.7会认为该存储有数据而终止初始化，导致mysql无法部署成功，解决办法是：在spec.containers中添加忽略“lost+found”的参数：</p>
-</blockquote>
-<div class="highlight"><pre><span></span><code>spec:
-      containers:
-      - args:
-        - --ignore-db-dir=lost+found
-</code></pre></div>
+<p>Borg的最大特性是：</p>
+<ul>
+<li>物理资源利用率高</li>
+<li>服务器共享，进程级别隔离</li>
+<li>高可用，故障恢复时间短</li>
+<li>调度策略灵活等</li>
+<li>一个集群可以管理数万台服务器</li>
+</ul>
+<p>此外，Borg将资源划分成在线任务和离线任务2种，在线任务在资源不足时可以抢占离线任务资源，在集群资源充足时离线任务可以继续跑任务，这样可以提升资源利用率。</p>
+<h2 id="borg"><strong>Borg架构</strong><a class="headerlink" href="#borg" title="Permanent link">&para;</a></h2>
+<p><img alt="img.png" src="../img.png" /></p>
+<p>Borg架构和k8s架构很像，但也有差别，如：</p>
+<ul>
+<li>Borg的存储用的是Paxos协议，该协议较复杂；k8s存储（etcd）用的是raft协议，该协议相对简单；</li>
+<li>1个Borg集群称呼cell；1个k8s集群称呼cluster等；</li>
+<li>单个Borg集群可以管理数万台服务器，而单个k8s集群最多只能管理5000台机器，虽然有些云厂商对k8s集群做了优化可以管理数万台机器，其改造后的k8s管理规模仍然不及Borg；</li>
+<li>Borg对服务器管理的资源使用率超高（据说达到了60%+），k8s对机器的管理资源率不高，不过可以借助生态组件提升该能力。</li>
+<li>...</li>
+</ul>
 
               
             </article>
@@ -1045,7 +1052,7 @@
     <nav class="md-footer__inner md-grid" aria-label="页脚">
       
         
-        <a href="../k8s%E6%9E%B6%E6%9E%84%E5%9F%BA%E7%A1%80/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 2.1. 架构简介" rel="prev">
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 1. 概览" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1054,11 +1061,26 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              2.1. 架构简介
+              1. 概览
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../cce/" class="md-footer__link md-footer__link--next" aria-label="下一页: 3.1. CCE" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              3.1. CCE
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
