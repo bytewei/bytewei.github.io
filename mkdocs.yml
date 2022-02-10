@@ -65,9 +65,10 @@ nav:
       - 1. 说明: index.md
 
   - k8s:
-      - 1. 概览: index0.md
+      - 1. 概览: k8s/index.md
       - 2. 分类介绍: dir1/1.md
-      - 3. 总结: dir2/2.md
+      - 3. 经验:
+          - 3.1. CCE: k8s/cce.md
   - Docker:
       - 1. 概览: index1.md
       - 2. 分类介绍: dir1/1.md
