@@ -66,7 +66,8 @@ nav:
 
   - k8s:
       - 1. 概览: k8s/index.md
-      - 2. 分类介绍: dir1/1.md
+      - 2. 分类介绍:
+          - 2.1. 架构简介: k8s/k8s架构基础.md
       - 3. 经验:
           - 3.1. CCE: k8s/cce.md
   - Docker:
