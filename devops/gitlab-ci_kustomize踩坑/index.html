@@ -12,19 +12,21 @@
         <meta name="author" content="renxiaoweimail@163.com">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="canonical" href="https://bytewei.github.io/devops/gitlab-ci_kustomize%E8%B8%A9%E5%9D%91/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.8">
     
     
       
-        <title>学习笔记与工作总结</title>
+        <title>3.1. gitlab-ciz之kustomize踩坑 - 学习笔记与工作总结</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.6e60f8b8.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6e60f8b8.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
         
           
           
@@ -42,7 +44,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -75,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -85,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="/." title="学习笔记与工作总结" class="md-header__button md-logo" aria-label="学习笔记与工作总结" data-md-component="logo">
+    <a href="../.." title="学习笔记与工作总结" class="md-header__button md-logo" aria-label="学习笔记与工作总结" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -104,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              3.1. gitlab-ciz之kustomize踩坑
             
           </span>
         </div>
@@ -182,7 +189,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         介绍
       </a>
     </li>
@@ -198,7 +205,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/k8s/" class="md-tabs__link">
+      <a href="../../k8s/" class="md-tabs__link">
         k8s
       </a>
     </li>
@@ -214,7 +221,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/index1.md" class="md-tabs__link">
+      <a href="../../index1.md" class="md-tabs__link">
         Docker
       </a>
     </li>
@@ -230,7 +237,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/index2.md" class="md-tabs__link">
+      <a href="../../index2.md" class="md-tabs__link">
         Go
       </a>
     </li>
@@ -240,13 +247,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="/devops/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         DevOps
       </a>
     </li>
@@ -262,7 +271,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/index4.md" class="md-tabs__link">
+      <a href="../../index4.md" class="md-tabs__link">
         DB
       </a>
     </li>
@@ -278,7 +287,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/index5.md" class="md-tabs__link">
+      <a href="../../index5.md" class="md-tabs__link">
         Linux
       </a>
     </li>
@@ -306,7 +315,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="学习笔记与工作总结" class="md-nav__button md-logo" aria-label="学习笔记与工作总结" data-md-component="logo">
+    <a href="../.." title="学习笔记与工作总结" class="md-nav__button md-logo" aria-label="学习笔记与工作总结" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -363,7 +372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         1. 说明
       </a>
     </li>
@@ -411,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/k8s/" class="md-nav__link">
+      <a href="../../k8s/" class="md-nav__link">
         1. 概览
       </a>
     </li>
@@ -451,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/k8s/k8s%E6%9E%B6%E6%9E%84%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+      <a href="../../k8s/k8s%E6%9E%B6%E6%9E%84%E5%9F%BA%E7%A1%80/" class="md-nav__link">
         2.1. 架构简介
       </a>
     </li>
@@ -498,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/k8s/cce/" class="md-nav__link">
+      <a href="../../k8s/cce/" class="md-nav__link">
         3.1. CCE
       </a>
     </li>
@@ -553,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/index1.md" class="md-nav__link">
+      <a href="../../index1.md" class="md-nav__link">
         1. 概览
       </a>
     </li>
@@ -567,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dir1/1.md" class="md-nav__link">
+      <a href="../../dir1/1.md" class="md-nav__link">
         2. 分类介绍
       </a>
     </li>
@@ -581,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dir2/2.md" class="md-nav__link">
+      <a href="../../dir2/2.md" class="md-nav__link">
         3. 总结
       </a>
     </li>
@@ -629,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/index2.md" class="md-nav__link">
+      <a href="../../index2.md" class="md-nav__link">
         1. 概览
       </a>
     </li>
@@ -643,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dir1/1.md" class="md-nav__link">
+      <a href="../../dir1/1.md" class="md-nav__link">
         2. 分类介绍
       </a>
     </li>
@@ -657,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dir2/2.md" class="md-nav__link">
+      <a href="../../dir2/2.md" class="md-nav__link">
         3. 总结
       </a>
     </li>
@@ -677,12 +686,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -705,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/devops/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         1. 概览
       </a>
     </li>
@@ -719,7 +730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dir1/1.md" class="md-nav__link">
+      <a href="../../dir1/1.md" class="md-nav__link">
         2. 分类介绍
       </a>
     </li>
@@ -731,12 +742,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" checked>
       
       
       
@@ -757,11 +770,62 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/devops/gitlab-ci_kustomize%E8%B8%A9%E5%9D%91/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          3.1. gitlab-ciz之kustomize踩坑
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         3.1. gitlab-ciz之kustomize踩坑
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    背景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cicd" class="md-nav__link">
+    CICD架构简介
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    几点思考
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -814,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/index4.md" class="md-nav__link">
+      <a href="../../index4.md" class="md-nav__link">
         1. 概览
       </a>
     </li>
@@ -828,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dir1/1.md" class="md-nav__link">
+      <a href="../../dir1/1.md" class="md-nav__link">
         2. 分类介绍
       </a>
     </li>
@@ -842,7 +906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dir2/2.md" class="md-nav__link">
+      <a href="../../dir2/2.md" class="md-nav__link">
         3. 总结
       </a>
     </li>
@@ -890,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/index5.md" class="md-nav__link">
+      <a href="../../index5.md" class="md-nav__link">
         1. 概览
       </a>
     </li>
@@ -904,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dir1/1.md" class="md-nav__link">
+      <a href="../../dir1/1.md" class="md-nav__link">
         2. 分类介绍
       </a>
     </li>
@@ -918,7 +982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dir2/2.md" class="md-nav__link">
+      <a href="../../dir2/2.md" class="md-nav__link">
         3. 总结
       </a>
     </li>
@@ -939,12 +1003,210 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    背景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cicd" class="md-nav__link">
+    CICD架构简介
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    几点思考
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+<a href="https://github.com/bytewei/bytewei.github.io/edit/master/docs/devops/gitlab-ci_kustomize踩坑.md" title="编辑此页" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
 
+
+  <h1>3.1. gitlab-ciz之kustomize踩坑</h1>
+
+<h3 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>cicd配置文件写的越来越多，越来越臃肿了，今天想优化，将公共配置抽象出来，没想到在简化kustomize配置时遇到了ArgoCD App无法生成的问题，花了很长时间最终定位出原来是测试环境集群的kubeconfig没有配置导致，在此做个记录。</p>
+</blockquote>
+<h3 id="cicd">CICD架构简介<a class="headerlink" href="#cicd" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>通过gitlab-ci.yml配置文件定义ci、cd全链路，目前已经将共性的配置独立出去了（如：maven构建、sonar扫描、argocd app的创建等）测试、线上环境各一套k8s集群，ArgoCD部署在测试环境k8s集群中，该ArgoCD同时管理测试与线上k8s集群。</p>
+</blockquote>
+<p><mark>问题</mark> </p>
+<p>今天遇到的问题是：测试环境的ArgoCD app可以自动生成，线上环境的ArgoCD app不能生成，并且报了下面错误：</p>
+<div class="highlight"><pre><span></span><code># 执行命令 kustomize build | kubectl apply -f -
+# 报了下面错误
+error: json: cannot unmarshal object into Go struct field Kustomization.patchesStrategicMerge of type patch.StrategicMerge
+</code></pre></div>
+<div class="highlight"><pre><span></span><code># 以及下面报错
+error: unable to recognize &quot;STDIN&quot;: no matches for kind &quot;Application&quot; in version &quot;argoproj.io/v1alpha1&quot;
+</code></pre></div>
+<p>最开始以为是ArgoCD的bug，在谷歌上搜索了问题，查到了一个类似的报错，不过那个bug是ArgoCD1.2版本的，我们用的是2.1版本的，该bug早已修复，所以排除了ArgoCD的报错；后来怀疑是kustomize漏洞，在电脑上模拟执行kustomize命令可以生成ArgoCD app文件，并且kustomize目前已经很成熟了不可能会有这种bug，排除了kustomize问题。</p>
+<p>最后我把整个yaml文件逐行读了一遍，发现生成线上k8s的ArgoCD App的yaml用的是线上环境k8s的KUBECONFIG文件，然而ArgoCD是部署在测试环境的k8s集群上，这就导致kubectl连接不了测试环境k8s集群，也就生成不了线上k8s的ArgoCD的App。</p>
+<p>yaml配置文件如下：</p>
+<div class="highlight"><pre><span></span><code># java-deployment.yml
+# template
+# 下面带“#”的“echo $IN_KUBE_CONFIG ...”一行是之前没有加的，这会导致KUBECONFIG使用错误。
+
+.deploy:
+  image: ${DEV_REGISTRY_HOST}/basic/deploy-tools:v2.0
+  variables:
+    GIT_STRATEGY: none
+    ENV_NAME: dev-xx # replace
+    CD_GIT_PATH: dev # replace
+    K8S_CLUSTER: https://xxx # replace: $INSIDE_K8S_CLUSTER or $CCE2
+    APP_CONFIG: &quot;xxx&quot; # repalce
+    CD_GIT_BRANCH: $ENV_NAME
+    K8S_NS: ${BUSINESS_NAME}-${ENV_NAME}
+    IN_HARBOR_SECRET: xxx-xx.yaml
+    PROD_HARBOR_SECRET: xxx-xxx.yaml
+    IN_KUBE_CONFIG: $kube_xxx
+    PROD_KUBE_CONFIG: $kube_yyy
+  tags:
+    - k8s
+  before_script:
+    - git init
+    - git config --global user.email &quot;gitlab@git.k8s.local&quot;
+    - git config --global user.name &quot;GitLab CI/CD&quot;
+  script:
+    - git clone https://${CI_USERNAME}:${CI_PASSWORD}@$CD_REPO
+    - cd $APP_NAME
+    - git checkout -B $CD_GIT_BRANCH
+    - sed -ri &quot;s/Tag[^*]*/Tag    kube.${ENV_NAME}.${APP_NAME}/&quot; base/fluent-bit-sidecar-config.yaml
+    - sed -i &quot;s@APP_CONFIG@${APP_CONFIG}@g&quot; base/jvm_opts_patch.yaml
+    - sed -i &quot;s@NAMESERVERS@${DNS}@g&quot; base/custom_env_patch.yaml
+    - cd overlays/$CD_GIT_PATH
+    - &gt;
+      if [ &quot;$CD_GIT_PATH&quot; == &quot;pre&quot; ] || [ &quot;$CD_GIT_PATH&quot; == &quot;prod&quot; ]; then
+        kustomize edit set image registry=${PROD_REGISTRY_HOST}/$REGISTRY_GROUP/$REGISTRY_IMAGE
+        kustomize edit set image registry-fluent=${PROD_REGISTRY_HOST}/public/efk/fluent/fluent-bit:latest
+      else
+        kustomize edit set image registry=${DEV_REGISTRY_HOST}/$REGISTRY_GROUP/$REGISTRY_IMAGE
+        kustomize edit set image registry-fluent=${DEV_REGISTRY_HOST}/public/efk/fluent/fluent-bit:latest
+      fi
+    - git add .
+    - git commit -am &quot;[skip ci] image update tag:${CI_PIPELINE_ID}-${CI_COMMIT_SHORT_SHA}(pipeline-hash)&quot; || /bin/true
+    - git push origin $CD_GIT_BRANCH -f
+  after_script:
+    - echo &quot;ARGO_PROJ:$ARGO_PROJ&quot;
+    - git clone https://${CI_USERNAME}:${CI_PASSWORD}@git.xx.cn/deployments/base.git
+    - git checkout -B master
+    - &gt;
+      if [ &quot;$CD_GIT_PATH&quot; == &quot;pre&quot; ] || [ &quot;$CD_GIT_PATH&quot; == &quot;prod&quot; ]; then
+        echo $PROD_KUBE_CONFIG |base64 -d &gt; $KUBECONFIG &amp;&amp; export KUBECONFIG=$KUBECONFIG
+        kubectl create namespace $K8S_NS || /bin/true
+        kubectl apply -f base/java-base/$PROD_HARBOR_SECRET -n $K8S_NS
+#         echo $IN_KUBE_CONFIG |base64 -d &gt; $KUBECONFIG &amp;&amp; export KUBECONFIG=$KUBECONFIG
+      else
+        echo $IN_KUBE_CONFIG |base64 -d &gt; $KUBECONFIG &amp;&amp; export KUBECONFIG=$KUBECONFIG
+        kubectl create namespace $K8S_NS || /bin/true
+        kubectl apply -f base/java-base/$IN_HARBOR_SECRET -n $K8S_NS
+      fi
+    - |
+      cat &lt;&lt;EOF &gt;./kustomization.yaml
+      apiVersion: kustomize.config.k8s.io/v1beta1
+      kind: Kustomization
+      resources:
+        - base/java-base/argo-application.yaml
+      patches:
+      - patch: |
+          - op: replace
+            path: /metadata/name
+            value: ${APP_NAME}-${ENV_NAME}
+          - op: replace
+            path: /metadata/labels/app
+            value: ${APP_NAME}
+          - op: replace
+            path: /spec/project
+            value: $ARGO_PROJ
+          - op: replace
+            path: /spec/source/repoURL
+            value: https://$CD_REPO
+          - op: replace
+            path: /spec/source/targetRevision
+            value: $CD_GIT_BRANCH
+          - op: replace
+            path: /spec/source/path
+            value: overlays/$CD_GIT_PATH
+          - op: replace
+            path: /spec/destination/server
+            value: $K8S_CLUSTER
+          - op: replace
+            path: /spec/destination/namespace
+            value: $K8S_NS
+        target:
+          kind: Application
+      EOF
+    - kustomize build | kubectl apply -f -
+    - &gt;
+      if [ &quot;$CD_GIT_PATH&quot; == &quot;dev&quot; ] || [ &quot;$CD_GIT_PATH&quot; == &quot;testing&quot; ]; then
+        echo y |argocd login $ARGOCD_IP --username $ARGCD_USER --password $ARGOCD_PASSWD --insecure
+        argocd app sync ${APP_NAME}-${ENV_NAME}
+      fi
+</code></pre></div>
+<h3 id="_2">几点思考<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><mark>事情本身的思考</mark></p>
+<ol>
+<li>问题虽小却也花了不少时间在排查上，造成这个问题的原因是配置文件太乱，这是之前我为了赶进度给自己挖的坑。</li>
+<li>配置缺少注释，这也给定位问题带来了困难。</li>
+</ol>
+<p><mark>配置文件的思考</mark></p>
+<ol>
+<li>配置文件较多，发版配置很多：开发与测试环境用1个配置，uat环境用1各配置，预发与生产环境用1个配置，各环境大部分配置相同，但恰好是那些少部分不同的配置给我今天的优化埋了坑。</li>
+<li>上面的yaml文件仍有地方需要优化，还可以将共性部分抽象成公共部分。</li>
+<li>即使用了kustomize工具管理配置，cicd全链路的配置仍然很多很繁琐，希望通过引入OAM（kubevela）平台降低配置。</li>
+</ol>
+<p><mark>其他收获</mark></p>
+<ol>
+<li>gitlab-ci.yml是支持比较复杂的shell脚本写法的，如：</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code>- &gt;
+      if [ &quot;$CD_GIT_PATH&quot; == &quot;dev&quot; ] || [ &quot;$CD_GIT_PATH&quot; == &quot;testing&quot; ]; then
+        echo y |argocd login $ARGOCD_IP --username $ARGCD_USER --password $ARGOCD_PASSWD --insecure
+        argocd app sync ${APP_NAME}-${ENV_NAME}
+      fi
+</code></pre></div>
+2. 当执行ArgoCD sync（通过argocd cli）触发了下面错误时有可能是k8s node节点时间不对（今天遇到的下面问题就是服务器时间不对）：</p>
+<div class="highlight"><pre><span></span><code>time=&quot;2022-02-11T10:25:18Z&quot; level=fatal msg=&quot;rpc error: code = Unauthenticated desc = invalid session: token is not valid yet; wait 4m30.513298563s&quot;
+</code></pre></div>
+
+              
             </article>
           </div>
         </div>
@@ -952,6 +1214,26 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="页脚">
+      
+        
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 1. 概览" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              1. 概览
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -986,10 +1268,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "search": "/assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
     
     
-      <script src="/assets/javascripts/bundle.960e086b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.960e086b.min.js"></script>
       
     
   </body>
